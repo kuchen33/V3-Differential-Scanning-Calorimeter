@@ -1,0 +1,242 @@
+\documentclass[a4paper,12pt,oneside,onecolum,final,openany]{report} 
+
+%---- Allgemeine Layout Einstellungen ------------------------------------------
+
+% Für Kopf und Fußzeilen, siehe auch KOMA-Skript Doku
+\usepackage[komastyle]{scrpage2}
+\pagestyle{plain}
+\setheadsepline{0.5pt}[\color{black}]
+\automark[section]{chapter}
+
+
+%Einstellungen für Figuren- und Tabellenbeschriftungen
+\usepackage[utf8x]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[ngerman]{babel} 
+\usepackage{amsfonts} 
+\usepackage{amsmath} 
+\usepackage{tabularx}
+\usepackage{float}
+
+%---- Weitere Pakete -----------------------------------------------------------
+% Die Pakete sind alle in der TeX Live Distribution enthalten. Wichtige Adressen
+% www.ctan.org, www.dante.de
+
+% Sprachunterstützung
+\usepackage[ngerman]{babel}
+
+% Benutzung von Umlauten direkt im Text
+% entweder "latin1" oder "utf8"
+%\usepackage[utf8]{inputenc}
+
+% Pakete mit Mathesymbolen und zur Beseitigung von Schwächen der Mathe-Umgebung
+%\usepackage{latexsym,exscale,stmaryrd,amssymb,amsmath}
+
+
+\usepackage[nointegrals]{wasysym}
+\usepackage{eurosym}
+
+% Anderes Literaturverzeichnisformat
+%\usepackage[square,sort&compress]{natbib}
+\usepackage{hyperref}
+% Für Farbe
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+
+% Caption neben Abbildung
+\usepackage{sidecap}
+
+
+% Befehl für "Entspricht"-Zeichen
+\newcommand{\corresponds}{\ensuremath{\mathrel{\widehat{=}}}}
+% Befehl für Errorfunction
+\newcommand{\erf}[1]{\text{ erf}\ensuremath{\left( #1 \right)}}
+
+
+%Fußnoten zwingend auf diese Seite setzen
+\interfootnotelinepenalty=1000
+
+%Für chemische Formeln (von www.dante.de)
+%% Anpassung an LaTeX(2e) von Bernd Raichle
+\makeatletter
+\DeclareRobustCommand{\chemical}[1]{%
+  {\(\m@th
+   \edef\resetfontdimens{\noexpand\)%
+       \fontdimen16\textfont2=\the\fontdimen16\textfont2
+       \fontdimen17\textfont2=\the\fontdimen17\textfont2\relax}%
+   \fontdimen16\textfont2=2.7pt \fontdimen17\textfont2=2.7pt
+   \mathrm{#1}%
+   \resetfontdimens}}
+\makeatother
+\usepackage{textcomp}
+\usepackage{upgreek}
+%\begin{document}
+%$\upmu$
+%\end{document}
+%Honecker-Kasten mit $$\shadowbox{$xxxx$}$$
+\usepackage{fancybox}
+
+%SI-Package
+\usepackage{siunitx}
+
+%keine Einrückung, wenn Latex doppelte Leerzeile
+\parindent0pt
+
+%Bibliography \bibliography{literatur} und \cite{gerthsen}
+%\usepackage{cite}
+\usepackage{babelbib}
+\selectbiblanguage{ngerman}
+
+\usepackage{siunitx}
+%\begin{document}
+ % \SI{1.55}{\micro\metre}
+\sisetup{math-micro=\text{µ},text-micro=µ}
+\usepackage{amsmath}
+\usepackage[verbose]{placeins}
+\usepackage{setspace}
+\usepackage{threeparttable}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\textsc{\Large Physikalisch- Chemisches Grundpraktikum\\[1.5ex] Universität Göttingen}
+
+\vspace*{0.5cm}
+
+\rule{\textwidth}{1pt}\\[0.5cm]
+{\huge \bfseries
+  Versuch 3: \\[1.5ex]
+  Differential Scanning Calometry}\\[0.5cm]
+\rule{\textwidth}{1pt}
+
+\vspace*{0.5cm}
+
+
+\begin{Large}
+\begin{tabular}{ll}
+Durchführende: &  Isaac Maksso, Julia Stachowiak\\
+Assistent: &  \\
+ Versuchsdatum: & 17.11.2016\\
+ Datum der ersten Abgabe: & 24.11.2016\\
+\end{tabular}
+\end{Large}
+
+\vspace*{0.5cm}
+
+
+\begin{table}[h]
+\centering
+\caption{Werte des Joule-Thomson-Koeffizienten für $\text{N}_2$.}
+\begin{scriptsize}
+\begin{tabular}{c|c|c|c} 
+Temperatur/~°C&$ \mu_{\text{N$_{2}$,exp.}}$/~$\frac{\text{K}}{\text{bar}}$&$ \mu_{\text{N$_{2}$,th.}}$/~$\frac{\text{K}}{\text{bar}}$&$ \mu_{\text{N$_{2}$,Lit.}}$/~$\frac{\text{K}}{\text{bar}}$\\
+\hline
+0,1 & 0,181 $\pm$ 0,02& 0,252 &0,26$^1$\\
+\hline
+22,7 & 0,175 $\pm$ 0,02& 0,220&0,25$^2$\\
+\hline
+50,8& 0,120 $\pm$ 0,01& 0,173&0,19$^1$\\
+\end{tabular}
+\end{scriptsize}
+\end{table}
+\noindent
+\FloatBarrier
+
+\begin{table}[h]
+\centering
+\caption{Werte des Joule-Thomson-Koeffizienten für $\text{CO}_2$.}
+\begin{scriptsize}
+\begin{tabular}{c|c|c|c} 
+Temperatur/~°C&$ \mu_{\text{CO$_{2}$,exp.}}$/~$\frac{\text{K}}{\text{bar}}$&$ \mu_{\text{CO$_{2}$,th.}}$/~$\frac{\text{K}}{\text{bar}}$&$ \mu_{\text{CO$_{2}$,Lit.}}$/~$\frac{\text{K}}{\text{bar}}$\\
+\hline
+0,1 & 1,20 $\pm$ 0,04& 1,21&1,31$^1$\\
+\hline
+22,8 & 1,01 $\pm$ 0,06& 1,05&1,12$^2$\\
+\hline
+50,8& 0,710 $\pm$ 0,05& 0,878&0,91$^1$\\
+\end{tabular}
+\end{scriptsize}
+\end{table}
+\noindent
+\FloatBarrier
+
+\vspace{1.3cm} 
+ ---------------------------------------
+\begin{tablenotes}\footnotesize  
+\item[1] $^1$Atkins, P.W.: \emph{Physikalische Chemie}, Wiley-VCH, Weinheim, \textbf{2006}.
+\item[2] $^2$Zemansky: \emph{Heat and Thermodynamics}, Mc Graw-Hill, New York, \textbf{1990}.
+\end{tablenotes}
+
+\end{titlepage}
+
+
+
+
+\tableofcontents
+\chapter{Experimentelles}
+\section{Experimenteller Aufbau}
+
+\section{Durchführung}
+
+\chapter{Auswertung}
+\section{Arbeitsweise und Anwendungsfelder eines DSC}
+Ein "Differential Scanning Calorimeter" (DSC) misst bei gleichmäßiger Wärmezufuhr zu zwei Stoffen die resultierende Temperaturdifferenz.
+Differential Scanning Kalorimeter lassen sich in 2 verschiedene Arten unterteilen: Power Compensation DSC und Heat-Flux DSC (in diesem Versuch verwendet). Bei Ersterem befinden sich Probe und Referenz in zwei verschiedenen Öfen, die auf die gleiche Temperatur geheizt werden. Die dafür aufgebrachten Heizleistungen werden verglichen und daraus die Enthalpiedifferenz $\Delta H$ bzw. die Differenz der molaren Wärmekapazitäten $\Delta C_\mathrm{m}$ ermittelt.\\
+Beim Heat-Flux DSC wird beiden Stoffen die gleiche Heizleitung zugeführt und die resultierende Temperaturdifferenz mittels Thermoelement gemessen.\\
+Bei einer geringen Temperaturdifferenz kann $C_\mathrm{m}(T)$ als konstant angesehen werden und aus den Differenzen $\Delta Q$ und $\Delta T$ errechnet werden.
+
+\begin{equation}
+C_{\mathrm{m},p} =\frac{1}{n} \left(\frac{\delta Q}{\partial T}\right)_p =\frac{1}{n} \left(\frac{\delta H}{\partial T}\right)_p = \frac{1}{n} \left(\frac{\partial S}{\partial T}\right)_p= \frac{1}{n} \left(\frac{\partial^2 G}{\partial T^2}\right)_p
+\end{equation}
+
+Der letzte Schritt ist möglich da:\\
+
+\begin{equation}
+dG =-SdT -pdV
+\end{equation}
+
+\begin{equation}
+\frac{dG}{dT}= -S
+\end{equation}
+
+Analog gilt für $\Delta C_{\mathrm{m},p}$.\\
+
+\begin{equation}
+\Delta C_{\mathrm{m},p} = \frac{1}{n} \left(\frac{\partial^2 \Delta G}{\partial T^2}\right)_p
+\end{equation}
+
+Das Differential Scanning Calorimeter misst die 
+
+
+
+
+
+\section{Rechnung}
+\section{Fehlerdiskussion}
+$\Delta T$ muss sehr gering sein -> sonst ist Cm nicht konstant und auswertung falsch
+
+\chapter{Literaturverzeichnis}
+1\quad Eckhold, Götz: \emph{Praktikum I zur Physikalischen Chemie}, Institut für Physikalische Chemie, Uni Göttingen, \textbf{2014}.
+
+\vspace{0,5 cm}
+
+2 \quad Eckhold, Götz: \emph{Statistische Thermodynamik}, Institut für Physikalische Chemie, Uni Göttingen, \textbf{2012}.
+
+\vspace{0,5cm}
+
+3 \quad Eckhold, Götz: \emph{Chemisches Gleichgewicht}, Institut für Physikalische Chemie, Uni Göttingen, \textbf{2015}.\\
+
+\vspace{0,5cm}
+
+4 \quad Atkins, P.W.: \emph{Physikalische Chemie}, Wiley-VCH, Weinheim, \textbf{2006}.\\
+
+\vspace{0,5cm}
+
+5 \quad Zemansky: \emph{Heat and Thermodynamics},Mc Graw-Hill, New York, \textbf{1990}.\\
+
+\end{document}
