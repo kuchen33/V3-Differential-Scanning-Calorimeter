@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.12)  17 NOV 2016 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.12)  17 NOV 2016 14:40
 entering extended mode
 **V3.tex
 (V3.tex
@@ -1146,7 +1146,12 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 273.
 
-Overfull \hbox (74.71466pt too wide) in paragraph at lines 280--293
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+
+Overfull \hbox (67.53168pt too wide) in paragraph at lines 280--293
 [] 
  []
 
@@ -1210,9 +1215,6 @@ Package rerunfilecheck Info: File `V3.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
@@ -1242,9 +1244,9 @@ fonts/cm/cmr12.pfb><D:/Neuer Ordner/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:
 /Neuer Ordner/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Neuer Ordner/fonts/ty
 pe1/public/amsfonts/cm/cmr8.pfb><D:/Neuer Ordner/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><D:/Neuer Ordner/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on V3.pdf (12 pages, 347444 bytes).
+Output written on V3.pdf (12 pages, 346768 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
+ 555 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
