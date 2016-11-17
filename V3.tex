@@ -174,16 +174,44 @@ Temperatur/~°C&$ \mu_{\text{CO$_{2}$,exp.}}$/~$\frac{\text{K}}{\text{bar}}$&$ \
 
 \end{titlepage}
 
+\tableofcontents %=Inhaltsverzeichnis
+\newpage
 
 \section{Einleitung}
 Drei verschiedenen Stoffe (Indium, Polymethylmethacrylat "PMMA", Cyclohexan) sollen über ihren Phasenübergang betrachtet werden und die zugehörige Temperatur, Übergangsenthalpie und -entropie sowie die Wärmekapazitäten ermittelt werden.\\
-Zunächst muss dabei die Ordnung des Phasenüberganges betrachtet werden. Bei Indium und Cyclohexan findet ein Phasenübergang erster Ordnung statt; dh. es gibt eine definierte   
+Zunächst muss dabei die Ordnung des Phasenüberganges betrachtet werden. Bei Indium und Cyclohexan findet ein Phasenübergang erster Ordnung statt.Dabei gibt es eine definierte Temperatur bei der die Wärmekapazität unendlich ist, da jede zugeführte Energie in den Phasenübergang gesteckt wird. Während des Phasenüberganges befinden sich demnach zwei Phasen im Gleichgewicht.\\
+PMMA ist ein Polymer, bei dem ein Glasübergang stattfindet, dh. ein Phasenübergang 2. Ordnung. Dabei ändert sich die Entropie kontinuierlich über eine Temperaturspanne hinweg. Von einem amorphen Festkörper findet der Übergang zu einer gummiartigen Masse statt.\\ 
+Nach Ehrenfest hat der Phasenübergang die $n$-te Ordnung, wenn die $n$-te Ableitung von $G$ nach $T$, also z.B. bei der ersten Ableitung die Entropie sich nicht stetig, sondern unstetig ändert. Siehe dafür Gleichung (\ref{Ehrenfest1}) für einen Phasenübergang 1. bzw. (\ref{Ehrenfest2}) für einen Übergang 2. Ordnung.\\ 
+
+\begin{equation} \label{Ehrenfest1}
+\left(\frac{\partial G}{\partial T}\right)_p = -S
+\end{equation}  
+  
+\begin{equation} \label{Ehrenfest2}
+\left(\frac{\partial^2 G}{\partial T^2}\right)_p = -\frac{\partial S}{\partial T}= - \frac{c_p}{T}
+\end{equation}  
 
 
+Die molare Wärmekapazität bei konstantem Druck ist definiert als Temperaturänderung pro Wärmemenge. Durch den konstanten Druck gilt für $dH$ Gleichung(\ref{dH}). 
+
+\begin{equation} \label{dH}
+dH_p= TdS +Vdp =TdS
+\end{equation}
+
+Isobare Prozesse haben den Vorteil dass der letzte Term des totalen Differentials für $H$ wegfällt und die Entropieänderung leicht aus $dH$ berechnet werden kann (Gleichung \ref{EntropieENthalpie}).\\
 
 
+\begin{equation} \label{EntropieEnthalpie}
+\left(\frac{dH}{T}\right)_p = dS
+\end{equation}
 
 \begin{equation}
+dH = TdS = \delta Q + \delta W +pdV
+\end{equation}
+ 
+Die verrichtete Arbeit wird über die Volumenänderung beschrieben, sodass letztendlich $\delta H = \delta Q$ gilt. So kann die Wärmekapazität nach Gleichung (\ref{cp}) beschrieben werden.\\
+
+\begin{equation} \label{cp}
 C_{\mathrm{m},p} =\frac{1}{n} \left(\frac{\delta Q}{\partial T}\right)_p =\frac{1}{n} \left(\frac{\delta H}{\partial T}\right)_p = \frac{1}{n} \left(\frac{\partial S}{\partial T}\right)_p= \frac{1}{n} \left(\frac{\partial^2 G}{\partial T^2}\right)_p
 \end{equation}
 
@@ -203,13 +231,8 @@ Analog gilt für $\Delta C_{\mathrm{m},p}$.\\
 \Delta C_{\mathrm{m},p} = \frac{1}{n} \left(\frac{\partial^2 \Delta G}{\partial T^2}\right)_p
 \end{equation}
 
-Das Differential Scanning Calorimeter misst die 
 
 
-
-
-
-\tableofcontents
 \chapter{Experimentelles}
 \section{Experimenteller Aufbau}
 
@@ -218,15 +241,53 @@ Das Differential Scanning Calorimeter misst die
 \chapter{Auswertung}
 \section{Arbeitsweise und Anwendungsfelder eines DSC}
 Ein "Differential Scanning Calorimeter" (DSC) misst bei gleichmäßiger Wärmezufuhr zu zwei Stoffen die resultierende Temperaturdifferenz.
-Differential Scanning Kalorimeter lassen sich in 2 verschiedene Arten unterteilen: Power Compensation DSC und Heat-Flux DSC (in diesem Versuch verwendet). Bei Ersterem befinden sich Probe und Referenz in zwei verschiedenen Öfen, die auf die gleiche Temperatur geheizt werden. Die dafür aufgebrachten Heizleistungen werden verglichen und daraus die Enthalpiedifferenz $\Delta H$ bzw. die Differenz der molaren Wärmekapazitäten $\Delta C_\mathrm{m}$ ermittelt.\\
-Beim Heat-Flux DSC wird beiden Stoffen die gleiche Heizleitung zugeführt und die resultierende Temperaturdifferenz mittels Thermoelement gemessen.\\
-Bei einer geringen Temperaturdifferenz kann $C_\mathrm{m}(T)$ als konstant angesehen werden und aus den Differenzen $\Delta Q$ und $\Delta T$ errechnet werden.
+Differential Scanning Kalorimeter lassen sich in 2 verschiedene Arten unterteilen: Power Compensation DSC und Heat-Flux DSC (in diesem Versuch verwendet). Bei Ersterem befinden sich Probe und Referenz in zwei verschiedenen Öfen, die auf die gleiche Temperatur geheizt werden. Die dafür aufgebrachten Heizleistungen werden verglichen und daraus die Enthalpiedifferenz $\Delta H$ bzw. die Änderung der molaren WÄrmekapazität $\Delta C_\mathrm{m}$ ermittelt.
+Beim Heat-Flux DSC wird beiden Stoffen die gleiche Heizleitung $\Delta Q_\mathrm{h}$ zugeführt und die resultierende Temperaturdifferenz mittels Thermoelement gemessen.
+Bei einer geringen Temperaturdifferenz kann $C_\mathrm{m}(T)$ als konstant angesehen werden und aus den Differenzen $\Delta Q$ und $\Delta T$ errechnet werden (Gleichung \ref{cp}).\\
 
-
+DSC findet vor allem in der Polymerchemie Anwendung. Über durch die Bestimmung der Glasumwandlungstemperatur kann der Temperaturereich ermittelt werden, in dem das Material bearbeitet werden muss. Grundsätzlich kann Glas aus sehr verschiedenen Stoffen hergestellt werden, weist jedoch auch verschiedene Stabilitäten auf. Gleiches gilt für Kunststoffe. 
+Sind $\Delta S$, $\Delta H$, $T_\mathrm{tr}$ und $c_p$ bekannt, so können Reaktionsgeschwindigkeitsgesetze aufgestellt und die benötigten Energien errechnet werden.\\ 
+Ferner können auch Kunststoffe bestimmt werden.
+Stoffe mit geordnetem Kristallgitter neigen eher zu einem Phasenübergang erster Ordnung; der "Peak" der DSC- Kurve ist dann relativ schmal. Bei unreinen Gittern ist der Phasenübergang  kontinuierlicher. SO können mittels DSC auch Reinheits- und Kristallisationsgrad ermittelt werden.\\
 
 \section{Rechnung}
+
+Die Werte wurden aus dem Graphen nach Gleichung (\ref{cp}) von der Auswertungssoftware "TA60" berechnet. 
+$\Delta S$ ergibt sich aus Gleichung (\ref{S}). Cyclohexan wurde mit steigender und abfallender Temperatur gemessen. Die tabellierten Werte sind die je die Mittelwerte der zugehörigen Kurve 
+
+\begin{equation}\label{S}
+\left(\frac{\Delta G}{T}\right)_p = \Delta S
+\end{equation}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & Stoffmenge $n$ [mol] & $T_\mathrm{tr}$ [°~C] & $\Delta H$ [J] & $C_{\mathrm{m},p} [J \cdot \mathrm{mol}^{-1}]$ & $\Delta S$ \\ 
+\hline 
+Indium & $232 \cdot 10^1$ & 157 & -0,57 & -322 $\cdot 10^1$ & • \\ 
+\hline 
+PMMA & $1152 \cdot 10^2$ & 87,07 & • & • & • \\ 
+\hline 
+Cyclohexan 1.Übergang & 10,27 & • & • & • & • \\ 
+Cyclohexan 2.Übergang & 10,27 & • & • & • & • \\
+\hline 
+\end{tabular} 
+
+
+
+Messwerte:\\
+
+
+
+
+
+
+
+
+
+
 \section{Fehlerdiskussion}
 $\Delta T$ muss sehr gering sein -> sonst ist Cm nicht konstant und auswertung falsch
+
+2 Peaks bei PMMA
 
 \chapter{Literaturverzeichnis}
 1\quad Eckhold, Götz: \emph{Praktikum I zur Physikalischen Chemie}, Institut für Physikalische Chemie, Uni Göttingen, \textbf{2014}.
