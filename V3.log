@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.12)  23 NOV 2016 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.12)  23 NOV 2016 19:59
 entering extended mode
 **V3.tex
 (V3.tex
@@ -1282,12 +1282,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 145.
 
-Overfull \hbox (68.82611pt too wide) in paragraph at lines 146--150
-\OT1/cmr/m/n/12 len []uber ih-ren Pha-sen[]ubergang be-trach-tet wer-den und di
-e zu-geh[]orige Tem-pe-ra-tur, []Ubergangsenthalpie
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
@@ -1549,7 +1543,7 @@ sfonts/cm/cmr7.pfb><D:/Neuer Ordner/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:
 s/type1/public/amsfonts/cm/cmsy10.pfb><D:/Neuer Ordner/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb><D:/Neuer Ordner/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:
 /Neuer Ordner/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V3.pdf (9 pages, 256324 bytes).
+Output written on V3.pdf (9 pages, 256354 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
