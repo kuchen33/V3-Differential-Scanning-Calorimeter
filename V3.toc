@@ -1,13 +1,11 @@
 \select@language {ngerman}
 \select@language {ngerman}
-\contentsline {section}{\numberline {0.1}Einleitung}{2}{section.0.1}
-\contentsline {section}{\numberline {0.2}Experimentelles}{3}{section.0.2}
-\contentsline {subsection}{\numberline {0.2.1}Experimenteller Aufbau}{3}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {0.2.2}Durchf\IeC {\"u}hrung}{3}{subsection.0.2.2}
-\contentsline {section}{\numberline {0.3}Auswertung}{4}{section.0.3}
-\contentsline {subsection}{\numberline {0.3.1}Arbeitsweise und Anwendungsfelder eines DSC}{4}{subsection.0.3.1}
-\contentsline {section}{\numberline {0.4}Auswertung}{5}{section.0.4}
-\contentsline {subsection}{\numberline {0.4.1}Arbeitsweise und Anwendungsfelder eines DSC}{5}{subsection.0.4.1}
-\contentsline {subsection}{\numberline {0.4.2}Rechnung}{6}{subsection.0.4.2}
-\contentsline {section}{\numberline {0.5}Fehlerdiskussion}{6}{section.0.5}
-\contentsline {section}{\numberline {0.6}Literaturverzeichnis}{6}{section.0.6}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
+\contentsline {section}{\numberline {2}Experimentelles}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Experimenteller Aufbau}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Durchf\IeC {\"u}hrung}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Differential Scanning Calometry}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}Auswertung}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Rechnung}{6}{subsection.3.1}
+\contentsline {section}{\numberline {4}Fehlerdiskussion}{7}{section.4}
+\contentsline {section}{\numberline {5}Literaturverzeichnis}{9}{section.5}
